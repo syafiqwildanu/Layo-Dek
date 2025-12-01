@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #D4A574 0%, #B8935E 100%);
+    border: 4px solid (135deg, #D4A574 0%, #B8935E 100%);
+    border-radius: 25px;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 20px 450px 0 450px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.header h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Membership Cards */
+.membership-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 200px;
+}
+
+.membership-text{
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 1px 0 30px 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon.double {
+    position: relative;
+}
+
+.icon.crown {
+    border-radius: 50%;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.price {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.duration {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.badge {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+/* Card Colors */
+.silver {
+    background: linear-gradient(135deg, #39bd9a 0%, #4BB2A3 37%, #45BEC6 92%);
+}
+
+.gold {
+    background: linear-gradient(135deg, #F0B845 0%, #f29943 37%, #ec7a3f 92%);
+}
+
+.diamond {
+    background: linear-gradient(135deg, #AA90E8 0%, #BA89D5 37%, #C77DC3 92%);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    font-size: 28px;
+    filter: grayscale(100%);
+}
+
+.nav-btn.active .nav-icon {
+    filter: grayscale(0%);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 16px;
+    }
+    
+    .header h2 {
+        font-size: 28px;
+    }
+    
+    .price {
+        font-size: 28px;
+    }
+    
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+}
